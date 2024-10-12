@@ -78,9 +78,8 @@ The `Elevator` class models the elevator system and its behavior.
 - **Multiple Elevators:** Expand the simulation to handle multiple elevators working together, along with an algorithm to determine which elevator should respond to each request.
 - **Safety Features:** Add simulated safety features, such as emergency stop functionality, weight capacity checks, and fail-safe shutdowns in case of system errors.
 
-## Author
-This elevator system simulation was created by Chris Parks, a software developer based in Colorado.  The project was developed to explore the basics of elevator control algorithms, multi-threading, and GUI integration in Java.
-
 ## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as you see fit.
 
+## Author
+This elevator system simulation was created by Chris Parks, a software developer based in Colorado.  The project was developed to explore the basics of elevator control algorithms, multi-threading, and GUI integration in Java.
