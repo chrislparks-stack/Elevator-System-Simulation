@@ -25,24 +25,6 @@ The **Elevator System** program simulates the basic functionality of an elevator
     - Add outside and inside requests through the provided prompts.
     - The elevator will process requests automatically and return to floor 1 when idle.
 
-## Assumptions
-### 1. Optimal Path & Request Handling
-- The elevator **prioritizes inside button requests** before processing other queued requests. This approach ensures that passengers inside the elevator have their requests satisfied first, minimizing their wait time.
-- The elevator **takes the shortest path** to complete the next queued request. If there are multiple requests in the queue, they are processed to minimize backtracking.
-- In the case where the elevator is in motion and a new request comes in that is on the current path and in the same direction, this new request is prioritized to optimize efficiency.
-
-### 2. Door Controls
-- Most elevators have buttons to **open or close doors manually**, as well as safety mechanisms to **prevent doors from closing if blocked**. These features were not implemented because the simulation has no mechanism to detect door states or control external physical inputs.
-- The doors in this program open and close automatically, with a wait time of **10 seconds** when servicing a floor. Additionally, if no inside button is pressed after 10 seconds, the elevator proceeds to the next request.
-
-### 3. Floor Indicators and Button Lights
-- Real elevators have **floor indicators** to show which floor the elevator is passing or currently on, as well as **light indicators** for pressed buttons. In this simulation, there is no graphical representation of these lights or indicators, as it focuses primarily on request handling and movement.
-- The floor number is logged in the log area, and the request queue is displayed in a separate queue area. These logs serve as a substitute for visual lights or indicators in a physical elevator.
-
-### 4. Safety Measures
-- **Safety mechanisms** are a critical component of real elevator systems, which include measures to handle situations like **malfunction, power loss, or system errors**. In this simulation, no safety features are implemented due to the lack of external sensors or physical control mechanisms.
-- This program does not simulate conditions such as **overloading**, **emergency stops**, or **fire safety** protocols, as there are no means to monitor or enforce these safety conditions within the code.
-
 ## Class Descriptions
 ### 1. Main Class
 The `Main` class serves as the entry point for the elevator system simulation. It sets up the GUI and allows user input for defining the building's top floor and adding floor requests. Key components include:
@@ -67,6 +49,24 @@ The `Elevator` class models the elevator system and its behavior.
 
 - **GUI Integration:**
     - **Log Area & Queue Area:** Updates these components in real time to display the elevator's activity and current request queue.
+
+## Assumptions
+### 1. Optimal Path & Request Handling
+- The elevator **prioritizes inside button requests** before processing other queued requests. This approach ensures that passengers inside the elevator have their requests satisfied first, minimizing their wait time.
+- The elevator **takes the shortest path** to complete the next queued request. If there are multiple requests in the queue, they are processed to minimize backtracking.
+- In the case where the elevator is in motion and a new request comes in that is on the current path and in the same direction, this new request is prioritized to optimize efficiency.
+
+### 2. Door Controls
+- Most elevators have buttons to **open or close doors manually**, as well as safety mechanisms to **prevent doors from closing if blocked**. These features were not implemented because the simulation has no mechanism to detect door states or control external physical inputs.
+- The doors in this program open and close automatically, with a wait time of **10 seconds** when servicing a floor. Additionally, if no inside button is pressed after 10 seconds, the elevator proceeds to the next request.
+
+### 3. Floor Indicators and Button Lights
+- Real elevators have **floor indicators** to show which floor the elevator is passing or currently on, as well as **light indicators** for pressed buttons. In this simulation, there is no graphical representation of these lights or indicators, as it focuses primarily on request handling and movement.
+- The floor number is logged in the log area, and the request queue is displayed in a separate queue area. These logs serve as a substitute for visual lights or indicators in a physical elevator.
+
+### 4. Safety Measures
+- **Safety mechanisms** are a critical component of real elevator systems, which include measures to handle situations like **malfunction, power loss, or system errors**. In this simulation, no safety features are implemented due to the lack of external sensors or physical control mechanisms.
+- This program does not simulate conditions such as **overloading**, **emergency stops**, or **fire safety** protocols, as there are no means to monitor or enforce these safety conditions within the code.
 
 ## Limitations
 - **No Physical Simulation:** The simulation does not involve any physical hardware or actual sensors, so it lacks features like weight sensors, emergency alarms, or safety stop buttons.
